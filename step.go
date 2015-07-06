@@ -28,7 +28,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	// iso8601 time format (RFC3339Nano)
+	// iso8601 time format (timezone: RFC3339Nano)
 	timeString := fmt.Sprintf("%v", time.Now().Format(time.RFC3339Nano))
 	if err := RunEnvmanAdd("ISO_DATETIME", timeString); err != nil {
 		fmt.Println("Failed to store ISO_DATETIME:", err)
