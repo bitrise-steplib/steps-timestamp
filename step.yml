@@ -6,7 +6,7 @@ fork_url: https://github.com/bitrise-io/steps-timestamp
 source:
   git: https://github.com/bitrise-io/steps-timestamp.git
 is_requires_admin_user: false
-is_always_run: true
+is_always_run: false
 outputs:
   -
     mapped_to: UNIX_TIMESTAMP
