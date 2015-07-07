@@ -20,8 +20,11 @@ func RunCommand(name string, args ...string) error {
 }
 
 func main() {
+	now := time.Now()
+
 	// unix timestamp
-	timestamp := time.Now().Unix()
+	// ex: 1436279645
+	timestamp := now.Unix()
 	timestampString := fmt.Sprintf("%d", timestamp)
 	if err := RunEnvmanAdd("UNIX_TIMESTAMP", timestampString); err != nil {
 		fmt.Println("Failed to store UNIX_TIMESTAMP:", err)
@@ -29,7 +32,8 @@ func main() {
 	}
 
 	// iso8601 time format (timezone: RFC3339Nano)
-	timeString := fmt.Sprintf("%v", time.Now().Format(time.RFC3339Nano))
+	// ex: 2015-07-07T16:34:05.51843664+02:00
+	timeString := fmt.Sprintf("%v", now.Format(time.RFC3339Nano))
 	if err := RunEnvmanAdd("ISO_DATETIME", timeString); err != nil {
 		fmt.Println("Failed to store ISO_DATETIME:", err)
 		os.Exit(1)
