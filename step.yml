@@ -1,6 +1,7 @@
-name: Generate time
+title: Generate time
+summary: Generates current timestamp
 description: |
-  Generates current timestamp 
+  Generates current timestamp
 website: https://github.com/bitrise-io/steps-timestamp
 fork_url: https://github.com/bitrise-io/steps-timestamp
 source:
@@ -8,11 +9,9 @@ source:
 is_requires_admin_user: false
 is_always_run: false
 outputs:
-  -
-    mapped_to: UNIX_TIMESTAMP
-    title: unix style 
-  -
-    mapped_to: ISO_DATETIME
-    title: iso 8601 (RFC3339Nano)
-
-
+  - UNIX_TIMESTAMP:
+    opts:
+      title: unix style
+  - ISO_DATETIME:
+    opts:
+      title: iso 8601 (RFC3339Nano)
