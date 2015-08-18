@@ -13,6 +13,9 @@ type_tags:
 is_requires_admin_user: false
 is_always_run: false
 is_skippable: false
+dependencies:
+  - manager: brew
+    name: go
 outputs:
   - UNIX_TIMESTAMP:
     opts:
