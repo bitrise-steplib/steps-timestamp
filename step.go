@@ -7,10 +7,13 @@ import (
 	"time"
 )
 
+// RunEnvmanAdd ...
 func RunEnvmanAdd(key, value string) error {
-	args := []string{"add", "-k", key, "-v", value}
+	args := []string{"add", "--key", key, "--value", value}
 	return RunCommand("envman", args...)
 }
+
+// RunCommand ...
 func RunCommand(name string, args ...string) error {
 	cmd := exec.Command(name, args...)
 	cmd.Stdin = os.Stdin

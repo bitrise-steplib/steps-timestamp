@@ -10,3 +10,5 @@ cd "${THIS_SCRIPTDIR}"
 set -v
 
 go run ./step.go
+
+# => DONE

@@ -3,11 +3,16 @@ summary: Generates current timestamp
 description: |
   Generates current timestamp
 website: https://github.com/bitrise-io/steps-timestamp
-fork_url: https://github.com/bitrise-io/steps-timestamp
-source:
-  git: https://github.com/bitrise-io/steps-timestamp.git
+source_code_url: https://github.com/bitrise-io/steps-timestamp
+support_url: https://github.com/bitrise-io/steps-timestamp/issues
+host_os_tags:
+  - "osx-10.10"
+project_type_tags: []
+type_tags:
+  - utility
 is_requires_admin_user: false
 is_always_run: false
+is_skippable: false
 outputs:
   - UNIX_TIMESTAMP:
     opts:
